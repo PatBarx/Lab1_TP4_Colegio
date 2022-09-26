@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Lab_TP4_Colegio">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" xPosition="67.0" yPosition="46.0">
+      <Fields>
+        <Field name="legajo" type="int" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="legajo"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getYset" returnType="void" visibility="public"/>
+        <Method name="agregarMateria" returnType="Materia" visibility="public">
+          <Argument type="Materia" name="m"/>
+        </Method>
+        <Method name="cantidadMaterias" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Materia" package="" visibility="public" xPosition="407.0" yPosition="46.0">
+      <Fields>
+        <Field name="idMateria" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="idMateria"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="anio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getYset" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="materias" source="Alumno" target="Materia" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
