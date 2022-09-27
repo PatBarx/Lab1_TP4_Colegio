@@ -1,28 +1,31 @@
 package lab1_tp4_colegio;
 
+import java.util.Objects;
+
 public class Materia {
 
-    private int idMateria;
-    private String nombre;
-    private int anio;
+    private int id,anio;
+    private String nom;
 
-    public Materia(int idMateria, String nombre, int anio) {
+    public Materia(int id, int anio, String nom) {
+        this.id = id;
+        this.anio = anio;
+        this.nom = nom;
     }
 
-    public int getIdMateria() {
-        return idMateria;
+    
+    
+
+    public Materia() {
+        this.id=0;
     }
 
-    public void setIdMateria(int idMateria) {
-        this.idMateria = idMateria;
+    public int getId() {
+        return id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getAnio() {
@@ -33,5 +36,46 @@ public class Materia {
         this.anio = anio;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+   
+
+  
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 67 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Materia other = (Materia) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Materia{" + "id=" + id + ", anio=" + anio + ", nom=" + nom + '}';
+    }
+    
     
 }

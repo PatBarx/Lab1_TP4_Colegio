@@ -1,12 +1,26 @@
 package lab1_tp4_colegio;
 
+import java.util.HashSet;
+import javax.swing.JOptionPane;
+
 public class Alumno {
 
     private int legajo;
-    private String apellido;
-    private String nombre;
+    private String apellido,nombre;
+    HashSet<Materia>mat;
 
     public Alumno(int legajo, String apellido, String nombre) {
+        this.legajo = legajo;
+        this.apellido = apellido;
+        this.nombre = nombre;
+       
+    }
+
+   
+    
+
+    public Alumno() {
+        mat=new HashSet();
     }
 
     public int getLegajo() {
@@ -33,11 +47,35 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public Materia agregarMateria(Materia m) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public HashSet<Materia> getMat() {
+        return mat;
     }
 
-    public int cantidadMaterias() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setMat(HashSet<Materia> mat) {
+        this.mat = mat;
+    }
+
+   
+
+    
+  
+    @Override
+    public String toString() {
+        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", mat=" + mat + '}';
+    }
+    
+    
+    public void AgregarMateria(Materia ma){
+        if(mat.add(ma)){
+        System.out.println("se anoto en la materia");
+         JOptionPane.showMessageDialog(null, "se anoto en la materia");
+    }else{
+            System.out.println("ya estaba anotado");
+            JOptionPane.showMessageDialog(null, "ya estaba anotado");
+        }
+        for (Materia aux : mat) {
+                 System.out.println(aux);
+             }
+              
     }
 }
