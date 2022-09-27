@@ -78,4 +78,7 @@ public class Alumno {
              }
               
     }
+     public void cantidadDeMaterias(){
+         JOptionPane.showMessageDialog(null, "el alumno esta inscripto a "+mat.size()+" materias");
+    }
 }

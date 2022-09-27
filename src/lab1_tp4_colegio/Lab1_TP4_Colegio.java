@@ -20,10 +20,11 @@ public class Lab1_TP4_Colegio {
         JOptionPane.showMessageDialog(null, "ingrese el id de la materia");
         ma.setId(leer.nextInt());
          al.AgregarMateria(ma);
+         al.cantidadDeMaterias();
             System.out.println("desea ingresar otra materia");
             r=leer.next();
         }while(r.equalsIgnoreCase("s"));
-        System.out.println(al.getApellido());   
+       
         
     }
     
