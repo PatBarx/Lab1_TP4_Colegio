@@ -23,6 +23,7 @@ public class Lab1_TP4_Colegio {
             System.out.println("desea ingresar otra materia");
             r=leer.next();
         }while(r.equalsIgnoreCase("s"));
+        System.out.println(al.getApellido());   
         
     }
     
