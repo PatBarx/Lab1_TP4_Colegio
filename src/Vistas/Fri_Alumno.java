@@ -37,6 +37,8 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
         btnSalir1 = new javax.swing.JButton();
         btnGuardar1 = new javax.swing.JButton();
         btnNuevo1 = new javax.swing.JButton();
+        lbMostrar = new javax.swing.JLabel();
+        txtMostrar = new javax.swing.JTextField();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder(null, "formulario de alumnos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
@@ -76,11 +78,18 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
             }
         });
 
+        lbMostrar.setText("mostrar");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 843, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(188, 188, 188)
+                .addComponent(lbMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(170, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(181, 181, 181)
@@ -109,7 +118,12 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(487, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbMostrar)
+                    .addComponent(txtMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(186, 186, 186))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(132, 132, 132)
@@ -146,22 +160,22 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addContainerGap(364, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
-        
+         System.exit(0);
     }//GEN-LAST:event_btnSalir1ActionPerformed
 
     private void btnNuevo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevo1ActionPerformed
-        txtLegajo1.setText("");txtApellido1.setText("");txtNombre1.setText("");
+        txtLegajo1.setText("");txtApellido1.setText("");txtNombre1.setText("");txtMostrar.setText("");
     }//GEN-LAST:event_btnNuevo1ActionPerformed
 
     private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
-       Alumno al=new Alumno(Integer.parseInt(txtLegajo1.getText()),txtApellido1.getText(),txtNombre1.getText());
+        txtMostrar.setText("legajo= "+txtLegajo1.getText()+" nombre= "+txtNombre1.getText()+" apellido "+txtApellido1.getText());
         
     }//GEN-LAST:event_btnGuardar1ActionPerformed
 
@@ -171,11 +185,13 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnNuevo1;
     private javax.swing.JButton btnSalir1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbMostrar;
     private javax.swing.JLabel lblApellido1;
     private javax.swing.JLabel lblLegajo1;
     private javax.swing.JLabel lblNombre1;
     private javax.swing.JTextField txtApellido1;
     private javax.swing.JTextField txtLegajo1;
+    private javax.swing.JTextField txtMostrar;
     private javax.swing.JTextField txtNombre1;
     // End of variables declaration//GEN-END:variables
 }
