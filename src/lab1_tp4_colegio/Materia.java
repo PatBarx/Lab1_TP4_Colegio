@@ -11,10 +11,7 @@ public class Materia {
         this.id = id;
         this.anio = anio;
         this.nom = nom;
-    }
-
-    
-    
+    }    
 
     public Materia() {
         this.id=0;
@@ -44,9 +41,6 @@ public class Materia {
         this.nom = nom;
     }
 
-   
-
-  
     @Override
     public int hashCode() {
         int hash = 5;
@@ -74,7 +68,7 @@ public class Materia {
 
     @Override
     public String toString() {
-        return "Materia{" + "id=" + id + ", anio=" + anio + ", nom=" + nom + '}';
+        return "\n*Materia: " + nom + "\n·ID: " + id + "\t·Año: " + anio;
     }
     
     

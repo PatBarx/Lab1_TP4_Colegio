@@ -12,12 +12,9 @@ public class Alumno {
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
-        this.nombre = nombre;
-       
+        this.nombre = nombre;     
+        mat=new HashSet();
     }
-
-   
-    
 
     public Alumno() {
         mat=new HashSet();
@@ -55,27 +52,28 @@ public class Alumno {
         this.mat = mat;
     }
 
-   
-
-    
-  
-    @Override
-    public String toString() {
-        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", mat=" + mat + '}';
-    }
-    
-    
     public void AgregarMateria(Materia ma){
+        mat.add(ma);
+        
+        /* De los mjes se encargan las Vistas ahora...
         if(mat.add(ma)){
         System.out.println("se anoto en la materia");
-         JOptionPane.showMessageDialog(null, "se anoto en la materia");
+        JOptionPane.showMessageDialog(null, "se anoto en la materia");
     }else{
             System.out.println("ya estaba anotado");
             JOptionPane.showMessageDialog(null, "ya estaba anotado");
         }
         for (Materia aux : mat) {
                  System.out.println(aux);
-             }
-              
+        }  */              
+    }
+    
+    public int cantidadMaterias(){
+        return mat.size();
+    }
+    
+    @Override
+    public String toString() {
+        return "  - Ficha de Alumno -\n-Legajo: " + legajo + "\n-Apellido y Nombre: " + apellido +" " + nombre + "\n-Cursa: " + mat;
     }
 }
