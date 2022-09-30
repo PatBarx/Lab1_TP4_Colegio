@@ -62,10 +62,10 @@ public class Alumno {
     }else{
             System.out.println("ya estaba anotado");
             JOptionPane.showMessageDialog(null, "ya estaba anotado");
-        }
+        }*/
         for (Materia aux : mat) {
                  System.out.println(aux);
-        }  */              
+        }              
     }
     
     public int cantidadMaterias(){

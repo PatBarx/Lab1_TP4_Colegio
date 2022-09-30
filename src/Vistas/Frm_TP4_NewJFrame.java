@@ -25,7 +25,7 @@ public class Frm_TP4_NewJFrame extends javax.swing.JFrame {
         mnuOpciones = new javax.swing.JMenu();
         mnuAlumno = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        mnuMateria = new javax.swing.JMenuItem();
         jMenu11 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -53,8 +53,13 @@ public class Frm_TP4_NewJFrame extends javax.swing.JFrame {
         mnuOpciones.add(mnuAlumno);
         mnuOpciones.add(jSeparator1);
 
-        jMenuItem5.setText("jMenuItem5");
-        mnuOpciones.add(jMenuItem5);
+        mnuMateria.setText("formularioMateria");
+        mnuMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuMateriaActionPerformed(evt);
+            }
+        });
+        mnuOpciones.add(mnuMateria);
 
         jMenuBar1.add(mnuOpciones);
 
@@ -93,10 +98,19 @@ public class Frm_TP4_NewJFrame extends javax.swing.JFrame {
 
     private void mnuAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAlumnoActionPerformed
         Fri_Alumno formalu=new Fri_Alumno();
-      escritorio1.removeAll();escritorio1.repaint();
-      escritorio1.add(formalu);formalu.setVisible(true);escritorio1.moveToFront(formalu);
-        
+        escritorio1.removeAll();escritorio1.repaint();
+        escritorio1.add(formalu);formalu.setVisible(true);escritorio1.moveToFront(formalu);
+
     }//GEN-LAST:event_mnuAlumnoActionPerformed
+
+    private void mnuMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMateriaActionPerformed
+              Fri_Materia forMat=new Fri_Materia();
+        escritorio1.removeAll();
+        escritorio1.repaint();
+        escritorio1.add(forMat);
+        forMat.setVisible(true);
+        escritorio1.moveToFront(forMat);
+    }//GEN-LAST:event_mnuMateriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,9 +155,9 @@ public class Frm_TP4_NewJFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenuItem mnuAlumno;
+    private javax.swing.JMenuItem mnuMateria;
     private javax.swing.JMenu mnuOpciones;
     // End of variables declaration//GEN-END:variables
 }

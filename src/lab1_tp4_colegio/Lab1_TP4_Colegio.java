@@ -15,7 +15,7 @@ public class Lab1_TP4_Colegio {
         Materia ing=new Materia(1234, 1, "Inglés");
         Materia mate=new Materia(2345, 1, "Matemáticas");
         Materia lab1=new Materia(3456, 1, "Laboratorio 1");
-        
+        Materia lab2=new Materia(3456, 1, "Laboratorio 2");
         JOptionPane.showMessageDialog(null,"  -  Colegio Grupo 10  - \n BIENVENIDO");
         
                             //(int legajo, String apellido, String nombre)
@@ -30,7 +30,8 @@ public class Lab1_TP4_Colegio {
         al2.AgregarMateria(mate);
         al2.AgregarMateria(lab1);
         
-        al2.AgregarMateria(lab1);
+        al2.AgregarMateria(lab2);
+        
         JOptionPane.showMessageDialog(null,"  -  Alumno 2 inscripto - ");
         //inscribimos a al2 en lab1 nuevamente
         //mostrar cant de materias de cada Alumno
