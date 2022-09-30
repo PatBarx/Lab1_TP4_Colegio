@@ -66,10 +66,12 @@ public class Materia {
         return true;
     }
 
-    @Override
+    /*@Override     //OR Java
     public String toString() {
         return "\n*Materia: " + nom + "\n·ID: " + id + "\t·Año: " + anio;
-    }
-    
-    
+    }*/
+    @Override       //OR Formulario
+    public String toString() {
+        return nom + " ·ID: " + id + " ·Año: " + anio;
+    }    
 }

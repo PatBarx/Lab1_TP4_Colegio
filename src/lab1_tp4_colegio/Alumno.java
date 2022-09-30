@@ -7,7 +7,7 @@ public class Alumno {
 
     private int legajo;
     private String apellido,nombre;
-    HashSet<Materia>mat;
+    private HashSet <Materia> mat;
 
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
@@ -62,21 +62,22 @@ public class Alumno {
     }else{
             System.out.println("ya estaba anotado");
             JOptionPane.showMessageDialog(null, "ya estaba anotado");
-        }*/
+        }
         for (Materia aux : mat) {
                  System.out.println(aux);
-        }              
+        }  */              
     }
     
     public int cantidadMaterias(){
         return mat.size();
     }
     
-    @Override
+    /*@Override
     public String toString() {
         return "  - Ficha de Alumno -\n-Legajo: " + legajo + "\n-Apellido y Nombre: " + apellido +" " + nombre + "\n-Cursa: " + mat;
-    }
-     public void cantidadDeMaterias(){
-         JOptionPane.showMessageDialog(null, "el alumno esta inscripto a "+mat.size()+" materias");
+    }*/
+    @Override
+    public String toString() {
+        return apellido +" " + nombre + "-Legajo: " + legajo ;
     }
 }
