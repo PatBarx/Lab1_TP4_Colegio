@@ -115,7 +115,7 @@
               <Component id="txtMostrarM" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="111" max="-2" attributes="0"/>
-              <EmptySpace pref="16" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -163,6 +163,9 @@
           <Dimension value="[295, 36]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdMActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNombreM">
       <Properties>
@@ -173,6 +176,9 @@
           <Dimension value="[295, 36]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreMActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAnioM">
       <Properties>
@@ -183,6 +189,9 @@
           <Dimension value="[295, 36]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAnioMActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bGuardar">
       <Properties>

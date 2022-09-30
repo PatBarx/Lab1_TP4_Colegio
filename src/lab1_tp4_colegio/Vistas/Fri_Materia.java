@@ -55,12 +55,27 @@ public class Fri_Materia extends javax.swing.JInternalFrame {
 
         txtIdM.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtIdM.setPreferredSize(new java.awt.Dimension(295, 36));
+        txtIdM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdMActionPerformed(evt);
+            }
+        });
 
         txtNombreM.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtNombreM.setPreferredSize(new java.awt.Dimension(295, 36));
+        txtNombreM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreMActionPerformed(evt);
+            }
+        });
 
         txtAnioM.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtAnioM.setPreferredSize(new java.awt.Dimension(295, 36));
+        txtAnioM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAnioMActionPerformed(evt);
+            }
+        });
 
         bGuardar.setText("GUARDAR");
         bGuardar.setPreferredSize(new java.awt.Dimension(110, 32));
@@ -173,7 +188,7 @@ public class Fri_Materia extends javax.swing.JInternalFrame {
                 .addComponent(txtMostrarM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -203,6 +218,28 @@ public class Fri_Materia extends javax.swing.JInternalFrame {
     //    Frm_Colegio.getLisMateria().add(new Materia(Integer.parseInt(txtIdM.getText()), Integer.parseInt(txtAnioM.getText()), txtNombreM.getText()));
     //    txtMostrarM.setText("ID:  "+txtIdM.getText()+" -Materia: "+txtNombreM.getText()+" -"+txtAnioM.getText()+" Año");
     }//GEN-LAST:event_bGuardarActionPerformed
+
+    private void txtIdMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdMActionPerformed
+               String val= "[0-9]*";//exp regularesif(
+       if(!txtIdM.getText().matches(val)){
+       JOptionPane.showMessageDialog(this,"no ingreso un numero");
+       txtIdM.requestFocus();}
+    }//GEN-LAST:event_txtIdMActionPerformed
+
+    private void txtNombreMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreMActionPerformed
+                 if(txtNombreM.getText().length()== 0){
+          JOptionPane.showMessageDialog(this,"debe llenar el campo");
+       txtNombreM.requestFocus();
+        
+        }
+    }//GEN-LAST:event_txtNombreMActionPerformed
+
+    private void txtAnioMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioMActionPerformed
+            String val= "[0-9]*";//exp regularesif(
+       if(!txtAnioM.getText().matches(val)){
+       JOptionPane.showMessageDialog(this,"no ingreso un numero");
+       txtAnioM.requestFocus();}
+    }//GEN-LAST:event_txtAnioMActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

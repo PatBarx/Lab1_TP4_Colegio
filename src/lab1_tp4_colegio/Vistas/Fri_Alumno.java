@@ -48,6 +48,11 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
 
         txtLegajo1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtLegajo1.setPreferredSize(new java.awt.Dimension(295, 36));
+        txtLegajo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLegajo1ActionPerformed(evt);
+            }
+        });
 
         lblApellido1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblApellido1.setText("APELLIDO");
@@ -60,9 +65,19 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
 
         txtApellido1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtApellido1.setPreferredSize(new java.awt.Dimension(295, 36));
+        txtApellido1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellido1ActionPerformed(evt);
+            }
+        });
 
         txtNombre1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtNombre1.setPreferredSize(new java.awt.Dimension(295, 36));
+        txtNombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombre1ActionPerformed(evt);
+            }
+        });
 
         lblNombre1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblNombre1.setText("NOMBRE");
@@ -172,7 +187,7 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
                 .addComponent(txtMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -200,6 +215,29 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
         //txtMostrar.setText("Legajo:  "+txtLegajo1.getText()+" -Nombre y Apellido: "+txtNombre1.getText()+" "+txtApellido1.getText());
         
     }//GEN-LAST:event_btnGuardar1ActionPerformed
+
+    private void txtLegajo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLegajo1ActionPerformed
+                 String val= "[0-9]*";//exp regularesif(
+       if(!txtLegajo1.getText().matches(val)){
+       JOptionPane.showMessageDialog(this,"no ingreso un numero");
+       txtLegajo1.requestFocus();}
+    }//GEN-LAST:event_txtLegajo1ActionPerformed
+
+    private void txtApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellido1ActionPerformed
+           if(txtApellido1.getText().length()== 0){
+          JOptionPane.showMessageDialog(this,"debe llenar el campo");
+       txtApellido1.requestFocus();
+        
+        }
+    }//GEN-LAST:event_txtApellido1ActionPerformed
+
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+                if(txtNombre1.getText().length()== 0){
+          JOptionPane.showMessageDialog(this,"debe llenar el campo");
+       txtNombre1.requestFocus();
+        
+        }
+    }//GEN-LAST:event_txtNombre1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
