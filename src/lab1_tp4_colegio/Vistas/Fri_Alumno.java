@@ -44,6 +44,11 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
 
         txtLegajo1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtLegajo1.setPreferredSize(new java.awt.Dimension(295, 36));
+        txtLegajo1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtLegajo1FocusLost(evt);
+            }
+        });
         txtLegajo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLegajo1ActionPerformed(evt);
@@ -234,6 +239,14 @@ public class Fri_Alumno extends javax.swing.JInternalFrame {
         
         }
     }//GEN-LAST:event_txtNombre1ActionPerformed
+
+    private void txtLegajo1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtLegajo1FocusLost
+        String val= "[0-9]*";//exp regular
+        if(!txtLegajo1.getText().matches(val) || txtLegajo1.getText().length() == 0){
+            JOptionPane.showMessageDialog(this,"Ingrese un NUMERO\n-No deje el campo vacío-");
+            txtLegajo1.requestFocus();
+        }
+    }//GEN-LAST:event_txtLegajo1FocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
